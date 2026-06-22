@@ -8,13 +8,16 @@ class VehicleRepository:
     def __init__(self, db: Session):
         self.db = db
 
-    def create_vehicle(self, vin: str, plate: str, brand: str, model: str, year: int):
+    def create_vehicle(
+        self, vin: str, plate: str, brand: str, model: str, year: int, color: str
+    ):
         new_vehicle = Vehicle(
             vin=vin,
             plate=plate,
             brand=brand,
             model=model,
             year=year,
+            color=color,
         )
 
         self.db.add(new_vehicle)

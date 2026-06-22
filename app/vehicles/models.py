@@ -15,6 +15,6 @@ class Vehicle(Base):
     brand = Column(String, nullable=False)
     model = Column(String, nullable=False)
     year = Column(Integer, nullable=False)
-    color = Column(Integer, nullable=False)
+    color = Column(String, nullable=False)
 
     scans = relationship("OBD2Scan", back_populates="vehicle")
